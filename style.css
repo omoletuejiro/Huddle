@@ -1,0 +1,139 @@
+/* === Reset and Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, p {
+  color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url('images/bg-desktop.svg');
+  color: hsl(192, 100%, 9%);
+  line-height: 1.6;
+}
+
+/* === Logo Section === */
+.logo-title {
+  padding: 40px 80px;
+}
+
+.logo-title img {
+  width: 150px;
+}
+
+/* === Hero Section === */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  align-items: center;
+  gap: 50px;
+  padding: 0 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.2; /* smaller value = less space between lines */
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+}
+
+.hero-text button {
+  width: 180px;
+  background-color: white;
+  color: hsl(257, 40%, 49%);
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text button:hover {
+  background-color: hsl(257, 70%, 68%);
+  color: white;
+}
+
+/* === Footer === */
+footer {
+  padding-top: 30px;
+  padding-right: 80px;
+  color: white;
+  text-align: right;
+}
+
+footer p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.socials {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+.socials a img {
+  width: 30px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.socials a img:hover {
+  transform: scale(1.2);
+}
+
+/* === Responsive Design (Mobile) === */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .hero img {
+    order: -1; /* Move image above text */
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-text button {
+    margin: 0 auto;
+  }
+
+  .logo-title {
+    padding: 20px;
+    text-align: center;
+  }
+}
